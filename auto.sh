@@ -31,7 +31,7 @@ git commit -m "$desc"
 #git@github.com:SebastianOderland/zypher_trading_bot.git
 git push origin master
 
---data "$(generate_post_data)" "https://api.github.com/repos/$repo_full_name/releases?access_token=$token"
+curl -u --data "$(generate_post_data)" "https://api.github.com/repos/$repo_full_name/releases?access_token=$token"
 # curl \
 #   -X POST \
 #   -H "Authorization: token " \
