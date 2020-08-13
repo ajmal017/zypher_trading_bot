@@ -7,7 +7,7 @@ GIT_PASSWORD="Ferabulok7568"
 git add .
 read -p "Commit description: " desc
 git commit -m "$desc"
-git push origin master
+git push https://SebastianOderland:Ferabulok7568@zypher_trading_bot.git master
 
 #read -p "Version: " version
 #git tag "v_$version"
