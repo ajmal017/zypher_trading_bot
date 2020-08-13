@@ -6,7 +6,7 @@
 
 branch=$(git rev-parse --abbrev-ref HEAD)
 #repo_full_name=$(git config --get remote.origin.url | sed 's/.*:\/\/github.com\///;s/.git$//')
-#token=$(git config --global github.token)
+token=$(git config --global github.token)
 
 read -p "Commit description: " desc
 read -p "Version: " version
@@ -40,6 +40,7 @@ git push origin master
 #   -d '{"repository_ids":[287237342]}'
 echo $repo_full_name
 curl \
+  -u SebastianOderland:"$token"
   -X POST \
   -H "Accept: application/vnd.github.v3+json" \
   https://api.github.com/repos/SebastianOderland/zypher_trading_bot/releases \
