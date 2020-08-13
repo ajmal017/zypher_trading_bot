@@ -42,7 +42,7 @@ echo $repo_full_name
 curl \
   -X POST \
   -H "Accept: application/vnd.github.v3+json" \
-  https://api.github.com/repos/"SebastianOderland/zypher_trading_bot"/releases \
+  https://api.github.com/repos/SebastianOderland/zypher_trading_bot/releases \
   -d '$(generate_post_data)'
 
 # curl --data "$(generate_post_data)" "https://api.github.com/repos/$repo_full_name/releases?access_token=$token"
