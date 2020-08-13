@@ -42,5 +42,5 @@ echo "Ferabulok7568" | curl -u "SebastianOderland" https://api.github.com --data
 
 
 
-python3 setup.py sdist
+python3 setup.py "$version" sdist
 #twine upload dist/*
