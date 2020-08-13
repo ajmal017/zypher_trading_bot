@@ -6,7 +6,7 @@ git config --global user.name SebastianOderland
 git add .
 read -p "Commit description: " desc
 git commit -m "$desc"
-#git push origin master
+git push origin master
 
 #read -p "Version: " version
 #git tag "v_$version"
