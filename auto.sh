@@ -32,4 +32,4 @@ git push origin master
 curl --data "$(generate_post_data)" "https://api.github.com/repos/SebastianOderland/zypher_trading_bot/releases?access_token=$token"
 
 python3 setup.py sdist "$version"
-twine upload dist/*
+c:/python38/lib/site-packages/twine upload dist/*
