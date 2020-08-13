@@ -30,6 +30,11 @@ git add .
 git commit -m "$desc"
 git push https://SebastianOderland:Ferabulok7568@github.com/"$repo_full_name".git master
 
+curl \
+  -X POST \
+  -H "Accept: application/vnd.github.machine-man-preview+json" \
+  https://api.github.com/app/installations/287237342/access_tokens
+
 curl --data "$(generate_post_data)" "https://api.github.com/repos/$repo_full_name/releases?access_token=$token"
 
 #python setup.py sdist
