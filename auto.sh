@@ -10,7 +10,7 @@ git config --global github.password Ferabulok7568
 git add .
 read -p "Commit description: " desc
 git commit -m "$desc"
-git push origin master | echo "SebastianOderland"
+echo "SebastianOderland" | git push origin master
 
 #read -p "Version: " version
 #git tag "v_$version"
