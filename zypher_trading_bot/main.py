@@ -1,8 +1,12 @@
-from ib_insync import IB, util
-from ib_insync.contract import *
-from ibtest import runstrategy
+from ib_insync import IB
+from ib_helper import runstrategy
+from smacross import SmaCross
+from teststrategy import TestStrategy
 
 
 def run(strategy, **kwargs):
-    print("ZYPHER_TRADING_BOT")
-    runstrategy(contracts, strategy, **kwargs)
+    runstrategy(strategy, **kwargs)
+
+
+if __name__ == "__main__":
+    run(TestStrategy, data0="EUR.USD-CASH-IDEALPRO", port=7497)
