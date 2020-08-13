@@ -40,8 +40,8 @@ git push origin master
 #   -d '{"repository_ids":[287237342]}'
 echo $repo_full_name
 curl \
-  -u SebastianOderland:"$token"
   -X POST \
+  -u SebastianOderland:"$token"
   -H "Accept: application/vnd.github.v3+json" \
   https://api.github.com/repos/SebastianOderland/zypher_trading_bot/releases \
   -d '$(generate_post_data)'
