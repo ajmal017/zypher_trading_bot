@@ -28,7 +28,7 @@ EOF
 git add .
 
 git commit -m "$desc"
-git push "https://SebastianOderland:Ferabulok7568@github.com/$repo_full_name.git master"
+git push https://SebastianOderland:Ferabulok7568@github.com/"$repo_full_name".git master
 
 curl --data "$(generate_post_data)" "https://api.github.com/repos/$repo_full_name/releases?access_token=$token"
 
