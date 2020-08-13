@@ -28,9 +28,10 @@ EOF
 git add .
 
 git commit -m "$desc"
-git push https://SebastianOderland:Ferabulok7568@github.com/"$repo_full_name".git master
+#git@github.com:SebastianOderland/zypher_trading_bot.git
+git push origin master
 
-curl -u "SebastianOderland:f07b1d96710b96bcfa767814133f4befdd943c87" https://api.github.com/user #--data "$(generate_post_data)" "https://api.github.com/repos/$repo_full_name/releases?access_token=$token"
+--data "$(generate_post_data)" "https://api.github.com/repos/$repo_full_name/releases?access_token=$token"
 # curl \
 #   -X POST \
 #   -H "Authorization: token " \
@@ -42,5 +43,5 @@ curl -u "SebastianOderland:f07b1d96710b96bcfa767814133f4befdd943c87" https://api
 
 
 
-python3 setup.py sdist "$version"
+#python3 setup.py sdist "$version"
 #twine upload dist/*
