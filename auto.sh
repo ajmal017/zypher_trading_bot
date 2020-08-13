@@ -1,11 +1,6 @@
 #!/bin/bash
 
-#git config --global user.email sebastian.oderland@gmail
-#git config --global user.name SebastianOderland
-#git config --global github.token f07b1d96710b96bcfa767814133f4befdd943c87
-
 branch=$(git rev-parse --abbrev-ref HEAD)
-#repo_full_name=$(git config --get remote.origin.url | sed 's/.*:\/\/github.com\///;s/.git$//')
 token=$(git config --global github.token)
 
 read -p "Commit description: " desc
