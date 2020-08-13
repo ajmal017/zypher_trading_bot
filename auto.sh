@@ -1,5 +1,8 @@
 #!/bin/bash
 
+git config --global user.email "sebastian.oderland@gmail.com"
+git config --global user.name "SebastianOderland"
+
 branch=$(git rev-parse --abbrev-ref HEAD)
 token=$(git config --global github.token)
 
