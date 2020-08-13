@@ -38,7 +38,7 @@ git push origin master
 #   -H "Accept: application/vnd.github.machine-man-preview+json" \
 #   https://api.github.com/app/installations/287237342/access_tokens \
 #   -d '{"repository_ids":[287237342]}'
-
+echo $repo_full_name
 curl \
   -X POST \
   -H "Accept: application/vnd.github.v3+json" \
