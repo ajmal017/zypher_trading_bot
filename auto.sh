@@ -27,4 +27,4 @@ git push origin master
 curl --data "$(generate_post_data)" "https://api.github.com/repos/SebastianOderland/zypher_trading_bot/releases?access_token=$token"
 
 python3 setup.py sdist "$version"
-python3 -m twine upload dist/*
+python3 -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
