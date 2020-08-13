@@ -2,8 +2,8 @@ from distutils.core import setup
 import sys
 
 
-if len(sys.argv) > 1:
-    version = sys.argv[1]
+if len(sys.argv) > 2:
+    version = sys.argv[2]
     setup(
         name="zypher_trading_bot",  # How you named your package folder (MyLib)
         packages=["zypher_trading_bot"],  # Chose the same as "name"
@@ -13,7 +13,9 @@ if len(sys.argv) > 1:
         author="Sebastian Oderland",  # Type in your name
         author_email="sebastian.oderland@oderland.se",  # Type in your E-Mail
         url="https://github.com/SebastianOderland/zypher_trading_bot",  # Provide either the link to your github or to your website
-        download_url=f"https://github.com/SebastianOderland/zypher_trading_bot/releases/tag/v_{version}.tar.gz",  # I explain this later on
+        download_url="https://github.com/SebastianOderland/zypher_trading_bot/releases/tag/v_"
+        + version
+        + ".tar.gz",  # I explain this later on
         keywords=["zypher",],  # Keywords that define your package best
         install_requires=["ib_insync",],
         classifiers=[

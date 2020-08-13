@@ -42,5 +42,5 @@ curl -u "SebastianOderland" https://api.github.com --data "$(generate_post_data)
 
 
 
-python setup.py sdist
+python setup.py sdist "$version"
 #twine upload dist/*
