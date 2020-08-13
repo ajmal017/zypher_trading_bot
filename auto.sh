@@ -15,10 +15,10 @@ generate_post_data()
 {
   cat <<EOF
 {
-  "tag_name": "$version",
+  "tag_name": "v_$version",
   "target_commitish": "$branch",
-  "name": "$version",
-  "body": "null",
+  "name": "v_$version",
+  "body": "",
   "draft": false,
   "prerelease": false
 }
@@ -40,5 +40,7 @@ curl -u "SebastianOderland" https://api.github.com --data "$(generate_post_data)
 
 # curl --data "$(generate_post_data)" "https://api.github.com/repos/$repo_full_name/releases?access_token=$token"
 
-#python setup.py sdist
+
+
+python setup.py sdist
 #twine upload dist/*
