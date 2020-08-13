@@ -1,8 +1,8 @@
 #!/bin/bash
 
-git config --global user.email sebastian.oderland@gmail
-git config --global user.name SebastianOderland
-git config --global github.token f07b1d96710b96bcfa767814133f4befdd943c87
+#git config --global user.email sebastian.oderland@gmail
+#git config --global user.name SebastianOderland
+#git config --global github.token f07b1d96710b96bcfa767814133f4befdd943c87
 
 branch=$(git rev-parse --abbrev-ref HEAD)
 repo_full_name=$(git config --get remote.origin.url | sed 's/.*:\/\/github.com\///;s/.git$//')
@@ -18,7 +18,7 @@ generate_post_data()
   "tag_name": "v_$version",
   "target_commitish": "$branch",
   "name": "v_$version",
-  "body": "",
+  "body": "$desc",
   "draft": false,
   "prerelease": false
 }
