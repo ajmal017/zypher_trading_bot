@@ -1,6 +1,6 @@
 from ib_insync import IB
-from ib_helper import runstrategy
-from teststrategy import TestStrategy
+from zypher_trading_bot.ib_helper import runstrategy
+from zypher_trading_bot.teststrategy import TestStrategy
 
 
 def run(strategy, **kwargs):
