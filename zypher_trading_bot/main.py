@@ -1,9 +1,8 @@
 from ib_insync import IB, util
 from ib_insync.contract import *
+from ibtest import runstrategy
 
 
-def run(contracts, ip="127.0.0.1", port=7496):
+def run(strategy, **kwargs):
     print("ZYPHER_TRADING_BOT")
-    ib = IB()
-    ib.connect(ip, port, clientId=1)
-    print("CONNECTED")
+    runstrategy(contracts, strategy, **kwargs)
