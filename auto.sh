@@ -2,7 +2,7 @@
 
 git config --global user.email sebastian.oderland@gmail
 git config --global user.name SebastianOderland
-git config --global github.token 7eada1464f1ef7f528ffe4c070aaf43b5c5a6178 
+git config --global github.token 7eada1464f1ef7f528ffe4c070aaf43b5c5a6178
 
 GIT_PASSWORD="Ferabulok7568"
 git add .
