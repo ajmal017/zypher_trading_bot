@@ -1,6 +1,5 @@
 from ib_insync import IB
 from ib_helper import runstrategy
-from smacross import SmaCross
 from teststrategy import TestStrategy
 
 
