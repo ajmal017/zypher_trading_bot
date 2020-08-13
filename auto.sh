@@ -2,7 +2,7 @@
 
 git config --global user.email sebastian.oderland@gmail
 git config --global user.name SebastianOderland
-git config --global github.token 802f80d7640739421cf7b57db9126985d2a1ff71
+git config --global github.token f07b1d96710b96bcfa767814133f4befdd943c87
 
 branch=$(git rev-parse --abbrev-ref HEAD)
 repo_full_name=$(git config --get remote.origin.url | sed 's/.*:\/\/github.com\///;s/.git$//')
@@ -30,7 +30,7 @@ git add .
 git commit -m "$desc"
 git push https://SebastianOderland:Ferabulok7568@github.com/"$repo_full_name".git master
 
-echo "Ferabulok7568" | curl -u "SebastianOderland" https://api.github.com --data "$(generate_post_data)" "https://api.github.com/repos/$repo_full_name/releases?access_token=$token"
+curl -u "SebastianOderland:f07b1d96710b96bcfa767814133f4befdd943c87" https://api.github.com/user --data "$(generate_post_data)" "https://api.github.com/repos/$repo_full_name/releases?access_token=$token"
 # curl \
 #   -X POST \
 #   -H "Authorization: token " \
@@ -42,5 +42,5 @@ echo "Ferabulok7568" | curl -u "SebastianOderland" https://api.github.com --data
 
 
 
-python3 setup.py sdist "--version=$version"
+python3 setup.py sdist "$version"
 #twine upload dist/*
