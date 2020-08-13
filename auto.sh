@@ -30,7 +30,7 @@ git add .
 git commit -m "$desc"
 git push https://SebastianOderland:Ferabulok7568@github.com/"$repo_full_name".git master
 
-curl -u "SebastianOderland" https://api.github.com --data "$(generate_post_data)" "https://api.github.com/repos/$repo_full_name/releases?access_token=$token"
+echo "Ferabulok7568" | curl -u "SebastianOderland" https://api.github.com --data "$(generate_post_data)" "https://api.github.com/repos/$repo_full_name/releases?access_token=$token"
 # curl \
 #   -X POST \
 #   -H "Authorization: token " \

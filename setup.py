@@ -1,7 +1,8 @@
 from distutils.core import setup
 import sys
 
-
+for arg in sys.argv:
+    print(arg)
 if len(sys.argv) > 2:
     version = sys.argv[2]
     setup(
