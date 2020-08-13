@@ -4,7 +4,7 @@ import sys
 
 if len(sys.argv) > 2:
     version = sys.argv[2]
-    sys.argv.remove("--version")
+    sys.argv = [sys.argv[0], sys.argv[1]]
     setup(
         name="zypher_trading_bot",  # How you named your package folder (MyLib)
         packages=["zypher_trading_bot"],  # Chose the same as "name"
